@@ -35,10 +35,10 @@ export default function Journey() {
 ]
 
     return (
-        <div className="bg-main flex flex-col gap-10 px-[clamp(24px,2vw,36px)] py-20 font-main">
-            <h2 className="text-[clamp(24px,3vw,32px)] font-bold">Perjalanan</h2>
+        <div className="bg-bg-second flex flex-col gap-10 px-[clamp(24px,2vw,36px)] py-20 font-main">
+            <h2 className="text-[clamp(26px,3vw,36px)] font-extrabold text-text">Perjalanan</h2>
             <div>
-                <div className="border-l-4 border-cyan-400/80 border-dashed absolute left-14 top-1040 -bottom-1220 w-0">
+                <div className="border-l-4 border-card border-dashed absolute left-14 top-1030 -bottom-1210 w-0">
                 </div>
                 <CardJourney itemList={journeyItemList}/>
             </div>

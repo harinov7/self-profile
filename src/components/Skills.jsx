@@ -29,7 +29,7 @@ export default function Skills() {
         },
         {
             src: Typescript_Logo,
-            alt: "HTML Logo"
+            alt: "Typescript Logo"
         }
     ]
     const titleLanguages = "Bahasa"
@@ -59,15 +59,15 @@ export default function Skills() {
         },
         {
             src: VSCode_Logo,
-            alt: "Github Logo"
+            alt: "VSCode Logo"
         },
         {
             src: Vite_Logo,
-            alt: "Github Logo"
+            alt: "Vite Logo"
         },
         {
             src: npm_Logo,
-            alt: "Github Logo"
+            alt: "npm Logo"
         }
     ]
     const titleTools = "Tools"
