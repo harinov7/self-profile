@@ -1,11 +1,21 @@
 @import "tailwindcss";
 
 @theme {
-  --color-bg-main: #fafafa;
-  --color-bg-second: #f0f0f0;
-  --color-badge: #cfcfcf;
+  --color-main: #1b1f1a;
+  --color-bg-second: #0f0f0f;
+  --color-card: #C69874;
+  --color-card-shadow: rgba(122, 209, 117, 0.2);
+  --color-primary: #14532D;
+  --color-secondary: #166534;
+  --color-accent: #22C55E;
+  --color-badge: #DCFCE7;
+  --color-text: #349e38;
+  --color-muted-text: #647067;
+  --color-border: #4e9c40;
+
+  --font-main: "lato";
 }
 
 body {
-  @apply bg-bg-main;
+  @apply bg-main;
 }

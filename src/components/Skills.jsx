@@ -74,9 +74,9 @@ export default function Skills() {
     const descriptionTools = "Dalam proses development, saya terbiasa menggunakan Git, GitHub, Vite, npm, dan berbagai tools lainnya untuk mengelola serta menjalankan project."
 
     return (
-        <div className="px-[clamp(24px,2vw,36px)] py-20 font-mono">
-            <h2 className="text-[clamp(24px,3vw,32px)] font-bold">Keahlian Saya</h2>
-            <div className="flex flex-col items-center gap-5 mt-7">
+        <div className="px-[clamp(24px,2vw,36px)] py-20 font-main bg-bg-second">
+            <h2 className="text-[clamp(26px,3vw,36px)] font-extrabold text-text">Keahlian Saya</h2>
+            <div className="flex flex-col items-center gap-5 mt-7 text-white">
                 <CardSkill itemList={itemListLanguages} title={titleLanguages} description={descriptionLanguage} />
                 <CardSkill itemList={itemListFramework} title={titleFramework} description={descriptionFramework} />
                 <CardSkill itemList={itemListTools} title={titleTools} description={descriptionTools} />
