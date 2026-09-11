@@ -5,10 +5,10 @@ export default function FinisherHeader() {
     useEffect(() => {
         try {
             new window.FinisherHeader({
-                count: 20,
+                count: 50,
 
                 size: {
-                    min: 1,
+                    min: 2,
                     max: 4,
                     pulse: 0
                 },

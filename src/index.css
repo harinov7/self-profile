@@ -16,6 +16,6 @@
   --font-main: "lato";
 }
 
-body {
-  @apply bg-main;
+html {
+  scroll-behavior: smooth;
 }
