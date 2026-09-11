@@ -31,11 +31,11 @@ export default function Journey() {
     ]
 
     return (
-        <div id="journey" className="bg-bg-second flex flex-col gap-10 px-[clamp(24px,2vw,36px)] py-20 font-main">
+        <div id="journey" className="bg-bg-second flex flex-col gap-10 px-[clamp(32px,8vw,96px)] py-20 font-main">
             <h2 className="text-[clamp(26px,3vw,36px)] font-extrabold"><span className="text-white border-b-2 pb-1 border-text">Perjalanan</span></h2>
             <div>
                 <div className="relative">
-                    <div className="border-l-4 border-text border-dashed absolute left-8 top-15 bottom-15 w-0">
+                    <div className="border-l-4 border-text border-dashed absolute left-8 top-[clamp(24px,2vw,48px)] bottom-15 w-0 md:left-1/2">
                     </div>
                     <CardJourney itemList={journeyItemList} />
                 </div>

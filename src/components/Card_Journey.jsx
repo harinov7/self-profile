@@ -4,18 +4,13 @@ export default function CardJourney({ itemList }) {
     return (
         <div className="relative flex flex-col gap-10">
             {itemList.map((e, i) => (
-                <div className="flex items-center justify-between w-full" key={i}>
+                <div className={`flex items-center justify-between w-full ${Number(e.no) % 2 === 1 ? `md:justify-end` : `md:justify-start`}`} key={i}>
                     <div className="flex-shrink-0">
-                        <div className="rounded-full bg-card w-[clamp(48px,21vw,72px)] h-[clamp(48px,21vw,72px)] flex items-center justify-center shadow-[0_4px_15px_var(--color-card-shadow)]">
-                            <p className="text-white font-bold text-3xl text-shadow-lg">{e.no}</p>
+                        <div className="rounded-full absolute bg-card w-[clamp(48px,15vw,72px)] h-[clamp(48px,15vw,72px)] flex items-center justify-center left-8 -translate-x-1/2 -translate-y-1/2 md:left-1/2">
+                            <p className="text-white font-bold text-[clamp(12px,7vw,32px)] text-shadow-lg">{e.no}</p>
                         </div>
-                        {/* <img
-                            src={e.src}
-                            alt={e.alt}
-                            className="rounded-full shadow-lg w-[clamp(48px,21vw,72px)] aspect-square object-cover"
-                        /> */}
                     </div>
-                    <div className="ml-7 px-5 py-4 border-t-2 border-border rounded-b-3xl w-[clamp(200px,70vw,450px)] shadow-[0_4px_15px_var(--color-card-shadow)]">
+                    <div className="ml-7 px-5 py-4 border-t-2 border-border rounded-b-3xl w-[clamp(150px,55vw,450px)] md:w-[clamp(250px,30vw,450px)] animate-light">
                         <h2 className="text-[clamp(22px,2vw,32px)] font-semibold leading-tight text-white">{e.title}</h2>
                         <div className="flex flex-wrap gap-1 text-xs mb-5">
                             {e.badge.map((e, i) => (

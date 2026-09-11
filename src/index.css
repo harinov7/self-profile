@@ -2,7 +2,7 @@
 
 @theme {
   --color-main: #1b1f1a;
-  --color-bg-second: #0f0f0f;
+  --color-bg-second: #141414;
   --color-card: #C69874;
   --color-card-shadow: rgba(122, 209, 117, 0.2);
   --color-primary: #14532D;
@@ -14,6 +14,20 @@
   --color-border: #4e9c40;
 
   --font-main: "lato";
+
+  --animate-light: light 2300ms ease-in-out infinite;
+
+  @keyframes light {
+
+    0%,
+    100% {
+      box-shadow: 0 0 15px 0 rgba(122, 209, 117, 0);
+    }
+
+    50% {
+      box-shadow: 0 0 15px 0 rgba(122, 209, 117, 0.15);
+    }
+  }
 }
 
 html {

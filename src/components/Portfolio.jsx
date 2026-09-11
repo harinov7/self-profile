@@ -24,9 +24,9 @@ export default function Portfolio() {
     }
 
     return (
-        <div id="portfolio" className="bg-main flex flex-col gap-5 px-[clamp(24px,2vw,36px)] py-20 font-main">
+        <div id="portfolio" className="bg-main flex flex-col gap-15 px-[clamp(32px,8vw,96px)] py-20 font-main">
             <h2 className="text-[clamp(26px,3vw,36px)] font-extrabold"><span className="text-white border-b-2 pb-1 border-text">Portofolio</span></h2>
-            <div className="flex flex-col items-center gap-5">
+            <div className="flex flex-col items-center gap-7">
                 <CardPortfolio itemList={itemListDuniaEs} />
                 <CardPortfolio itemList={itemListInventory} />
             </div>
