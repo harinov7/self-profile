@@ -3,29 +3,34 @@ import Web_Porto_Inventory from "../assets/Web_Porto_Inventory.jpeg"
 import CardPortfolio from "./Card_Portfolio";
 
 
-export default function Portfolio() {
+export default function Portfolio({
+    lang,
+    language
+}) {
 
     const itemListDuniaEs = {
         src: Web_Porto_Dunia_Es,
         alt: "Web_Porto_Dunia_Es",
-        title: "Dunia Es",
-        badge: ["React", "Tailwind CSS", "Javascript"],
-        description: "Website untuk memperkenalkan produk Es Mambo Dunia Es dengan empat pilihan rasa melalui tampilan yang sederhana dan responsif.",
-        href: "https://dunia-es-website.vercel.app/"
+        title: lang[language].portfolioSection.box1.title,
+        badge: lang[language].portfolioSection.box1.badge,
+        description: lang[language].portfolioSection.box1.description,
+        href: "https://dunia-es-website.vercel.app/",
+        btn: lang[language].portfolioSection.box1.btn
     }
 
     const itemListInventory = {
         src: Web_Porto_Inventory,
         alt: "Web_Porto_Inventory",
-        title: "Inventory Management System",
-        badge: ["HTML", "CSS", "Javascript"],
-        description: "Website pengelolaan inventaris yang dibangun dengan vanilla JavaScript, dilengkapi fitur CRUD, search, filter, sort, dan dashboard untuk membantu mengelola serta memantau data produk.",
-        href: "https://inventory-management-system-wheat-nu.vercel.app/"
+        title: lang[language].portfolioSection.box2.title,
+        badge: lang[language].portfolioSection.box2.badge,
+        description: lang[language].portfolioSection.box2.description,
+        href: "https://inventory-management-system-wheat-nu.vercel.app/",
+        btn: lang[language].portfolioSection.box2.btn
     }
 
     return (
         <div id="portfolio" className="bg-main flex flex-col gap-15 px-[clamp(32px,8vw,96px)] py-20 font-main">
-            <h2 className="text-[clamp(26px,3vw,48px)] font-extrabold"><span className="text-white border-b-2 pb-1 border-text">Portofolio</span></h2>
+            <h2 className="text-[clamp(26px,3vw,48px)] font-extrabold lg:flex lg:justify-center"><span className="text-white border-b-2 lg:border-b-4 pb-1 border-text">Portofolio</span></h2>
             <div className="flex flex-col gap-7 items-center lg:items-stretch lg:flex-row lg:justify-center">
                 <CardPortfolio itemList={itemListDuniaEs} />
                 <CardPortfolio itemList={itemListInventory} />

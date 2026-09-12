@@ -43,6 +43,14 @@
   }
 }
 
-html {
+html, body, #root {
   scroll-behavior: smooth;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE dan Edge lama */
+}
+
+html::-webkit-scrollbar, 
+body::-webkit-scrollbar, 
+#root::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, dan Edge Baru */
 }

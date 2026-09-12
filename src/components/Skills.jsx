@@ -12,7 +12,10 @@ import npm_Logo from "../assets/npm_Logo.png"
 import CardSkill from "./Card_Skill";
 
 
-export default function Skills() {
+export default function Skills({
+    lang,
+    language
+}) {
 
     const itemListLanguages = [
         {
@@ -32,8 +35,6 @@ export default function Skills() {
             alt: "Typescript Logo"
         }
     ]
-    const titleLanguages = "Bahasa"
-    const descriptionLanguage = "Membangun struktur halaman, styling responsive, serta interaksi dan logic aplikasi menggunakan HTML, CSS, JavaScript, dan TypeScript."
 
     const itemListFramework = [
         {
@@ -45,8 +46,6 @@ export default function Skills() {
             alt: "Tailwind Logo"
         }
     ]
-    const titleFramework = "Framework & Libraries"
-    const descriptionFramework = "Terbiasa menggunakan React dan Tailwind CSS untuk membangun UI yang interaktif, responsive, dan reusable."
 
         const itemListTools = [
         {
@@ -70,18 +69,15 @@ export default function Skills() {
             alt: "npm Logo"
         }
     ]
-    const titleTools = "Tools"
-    const descriptionTools = "Dalam proses development, saya terbiasa menggunakan Git, GitHub, Vite, dan npm untuk mengelola serta menjalankan project."
 
     return (
         <div id="skills" className="px-[clamp(32px,8vw,96px)] py-20 font-main bg-bg-second">
-            <h2 className="text-[clamp(26px,3vw,48px)] font-extrabold"><span className="text-white border-b-2 pb-1 border-text">Keahlian</span></h2>
+            <h2 className="text-[clamp(26px,3vw,48px)] font-extrabold lg:flex lg:justify-center"><span className="text-white border-b-2 lg:border-b-4 pb-1 border-text">{lang[language].skillsSection.title}</span></h2>
             <div className="flex flex-col gap-7 mt-15 text-white items-center lg:items-stretch lg:flex-row lg:justify-between">
-                <CardSkill itemList={itemListLanguages} title={titleLanguages} description={descriptionLanguage} />
-                <CardSkill itemList={itemListFramework} title={titleFramework} description={descriptionFramework} />
-                <CardSkill itemList={itemListTools} title={titleTools} description={descriptionTools} />
+                <CardSkill itemList={itemListLanguages} title={lang[language].skillsSection.languageBox.title} description={lang[language].skillsSection.languageBox.description} />
+                <CardSkill itemList={itemListFramework} title={lang[language].skillsSection.frameworkBox.title} description={lang[language].skillsSection.frameworkBox.description} />
+                <CardSkill itemList={itemListTools} title={lang[language].skillsSection.toolsBox.title} description={lang[language].skillsSection.toolsBox.description} />
             </div>
-
         </div>
     )
 }

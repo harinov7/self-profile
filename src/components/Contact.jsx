@@ -1,32 +1,35 @@
 import cv from "../assets/CV_FADHIL_IBNU_ADHARI.pdf"
 
-export default function Contact() {
+export default function Contact({
+    lang,
+    language
+}) {
 
-    const contactOpsi = [{
+    const contactOpt = [{
         l: "mailto:ifadil728@gmail.com",
-        col: "#4285F4",
+        col: "text-[#4285F4]",
         icon: "fa-regular fa-envelope",
         title: "ifadil728@gmail.com"
     }, {
         l: "https://wa.me/6285141522359",
-        col: "#25D366",
+        col: "text-[#25D366]",
         icon: "fa-brands fa-whatsapp",
         title: "0895-3208-25569"
     }, {
         l: "https://maps.app.goo.gl/8PHiEVT31AL93678A",
-        col: "#EA4335",
+        col: "text-[#EA4335]",
         icon: "fa-solid fa-location-dot",
-        title: "Ciampea, Kabupaten Bogor, Jawa Barat"
+        title: lang[language].contactSection.contactOpt.location
     }]
 
     return (
         <div id="contact" className="bg-main flex flex-col px-[clamp(32px,8vw,96px)] pt-20 pb-3 font-main">
-            <h2 className="text-[clamp(26px,3vw,48px)] font-extrabold mb-7" ><span className="text-white border-b-2 pb-1 border-text">Hubungi</span><span className="text-text"> Saya</span></h2 >
-            <p className="mb-4 text-white text-[clamp(16px,2vw,22px)]">Jangan ragu untuk menghubungi saya jika Anda tertarik untuk mengajak saya bergabung dalam proyek Anda.</p>
+            <h2 className="text-[clamp(26px,3vw,48px)] font-extrabold mb-7" ><span className="text-white border-b-2 lg:border-b-4 pb-1 border-text">Hubungi</span><span className="text-text"> Saya</span></h2 >
+            <p className="mb-4 text-white text-[clamp(16px,2vw,22px)]">{lang[language].contactSection.description}</p>
             <div className="flex flex-col gap-2 text-[clamp(16px,2vw,22px)]">
-                {contactOpsi.map((e, i) => (
-                    <a href={e.l} className="flex items-center gap-2 w-fit" target="_blank" rel="noopener noreferrer">
-                        <i className={`${e.icon} text-[${e.col}]`}></i>
+                {contactOpt.map((e, i) => (
+                    <a href={e.l} className="flex items-center gap-2 w-fit" target="_blank" rel="noopener noreferrer" key={i}>
+                        <i className={`${e.icon} ${e.col}`}></i>
                         <p className="text-white underline">{e.title}</p>
                     </a>
                 ))}
@@ -39,7 +42,7 @@ export default function Contact() {
                     <i className="fa-brands fa-github"></i>
                 </a>
             </div>
-            <a href={cv} download="CV_Fadhil_Ibnu_Adhari" className="border-t-2 border-border rounded-b-lg w-fit px-3 py-2 mt-5 text-lg lg:text-2xl transition duration-300 hover:bg-card hover:text-white hover:animate-light-hover font-bold text-text animate-light">Unduh CV</a>
+            <a href={cv} download="CV_Fadhil_Ibnu_Adhari" className="border-t-2 border-border rounded-b-lg w-fit px-3 py-2 mt-5 text-lg lg:text-2xl transition duration-300 hover:bg-card hover:text-white hover:animate-light-hover font-bold text-text animate-light">{lang[language].contactSection.loadCV}</a>
             <div className="mt-5 text-sm flex flex-col gap-3">
                 <hr className="text-text"></hr>
                     <a href="#home" className="w-fit text-white text-[clamp(10px,1vw,16px)]">
@@ -47,13 +50,13 @@ export default function Contact() {
                         <p>Frontend Developer</p>
                     </a>
                 <div className="flex justify-center gap-3 text-white text-[clamp(10px,1vw,16px)]">
-                    <a href="#about" className="underline">Tentang</a>
+                    <a href="#about" className="underline">{lang[language].contactSection.footer.about}</a>
                     <p>&#183;</p>
-                    <a href="#skills" className="underline">Keahlian</a>
+                    <a href="#skills" className="underline">{lang[language].contactSection.footer.skills}</a>
                     <p>&#183;</p>
-                    <a href="#portfolio" className="underline">Portofolio</a>
+                    <a href="#portfolio" className="underline">{lang[language].contactSection.footer.portfolio}</a>
                     <p>&#183;</p>
-                    <a href="#journey" className="underline">Perjalanan</a>
+                    <a href="#journey" className="underline">{lang[language].contactSection.footer.journey}</a>
                 </div>
                 <hr className="text-text"></hr>
                 <p className="text-xs text-white flex justify-center text-[clamp(10px,1vw,16px)]">© 2026 Fadhil Ibnu Adhari</p>

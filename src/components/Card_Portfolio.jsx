@@ -1,7 +1,7 @@
 
 
 export default function CardPortfolio({
-    itemList
+    itemList,
 }) {
 
     return (
@@ -21,7 +21,7 @@ export default function CardPortfolio({
                 <div className="w-fit">
                     <a href={itemList.href} target="_blank" rel="noopener noreferrer">
                         <p className="px-4 py-2 my-5 rounded-lg bg-card text-white font-bold transition duration-300 hover:scale-107">
-                            Lihat
+                            {itemList.btn}
                         </p>
                     </a>
 
