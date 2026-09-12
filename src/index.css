@@ -16,6 +16,7 @@
   --font-main: "lato";
 
   --animate-light: light 2300ms ease-in-out infinite;
+  --animate-light-hover: light-hover 1000ms ease-in-out infinite;
 
   @keyframes light {
 
@@ -26,6 +27,18 @@
 
     50% {
       box-shadow: 0 0 15px 0 rgba(122, 209, 117, 0.15);
+    }
+  }
+
+  @keyframes light-hover {
+
+    0%,
+    100% {
+      box-shadow: 0 0 15px 0 rgba(217, 52, 63, 0);
+    }
+
+    50% {
+      box-shadow: 0 0 15px 2px rgba(217, 52, 63, 0.3);
     }
   }
 }

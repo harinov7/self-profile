@@ -17,10 +17,10 @@ export default function Navigasi({
         }
     }, [hamburger])
 
-    const menuAside = [{
+    const navigationOption = [{
         idMenu: "#home",
         logo: "fa-regular fa-house",
-        title: "Home"
+        title: "Beranda"
     }, {
         idMenu: "#about",
         logo: "fa-solid fa-user",
@@ -45,8 +45,15 @@ export default function Navigasi({
 
     return (
         <nav className="flex fixed top-0 left-0 z-60 font-main w-full">
-            <div className="z-50 w-full backdrop-blur-sm flex justify-end">
-                <div className={`text-2xl md:text-3xl text-white font-bold bg-cyan-400 w-10 md:w-12 h-10 md:h-12 bg-secondary rounded-full flex items-center justify-center mr-[clamp(10px,5vw,28px)] mt-[clamp(10px,5vw,28px)] shadow-lg cursor-pointer select-none`} onClick={handleClickHamburger}>
+            <div className="z-50 w-full backdrop-blur-sm flex justify-end lg:block">
+                <ul className="hidden lg:flex justify-center gap-10 py-5">
+                    {navigationOption.map((e, i) => (
+                        <a href={e.idMenu} className="text-white text-xl transition duration-300 hover:text-text font-bold" key={i}>
+                            <li>{e.title}</li>
+                        </a>
+                    ))}
+                </ul>
+                <div className={`text-2xl md:text-3xl text-white font-bold bg-cyan-400 w-10 md:w-12 h-10 md:h-12 bg-secondary rounded-full flex items-center justify-center mr-[clamp(10px,5vw,28px)] mt-[clamp(10px,5vw,28px)] shadow-lg cursor-pointer select-none transition lg:hidden`} onClick={handleClickHamburger}>
                     {hamburger ? (
                         <button className="hamburger cursor-pointer">
                             &times;
@@ -70,7 +77,7 @@ export default function Navigasi({
                 </div>
                 <hr className="text-white mt-4" />
                 <ul className="text-white flex flex-col gap-[clamp(12px,2vw,24px)] text-[clamp(18px,4vw,20px)] py-7 font-medium">
-                    {menuAside.map((e, i) => (
+                    {navigationOption.map((e, i) => (
                         <li key={i}>
                             <a href={e.idMenu} className="flex items-center gap-3" onClick={handleClickHamburger}>
                                 <i className={e.logo}></i>

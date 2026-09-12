@@ -17,8 +17,14 @@ export default function CardPortfolio({
                     ))}
                 </div>
                 <p className="text-white">{itemList.description}</p>
-                <div className="w-fit px-4 py-2 my-5 rounded-lg bg-card text-white font-bold">
-                    <a href={itemList.href} target="_blank" rel="noopener noreferrer">Lihat</a>
+
+                <div className="w-fit">
+                    <a href={itemList.href} target="_blank" rel="noopener noreferrer">
+                        <p className="px-4 py-2 my-5 rounded-lg bg-card text-white font-bold transition duration-300 hover:scale-107">
+                            Lihat
+                        </p>
+                    </a>
+
                 </div>
             </div>
         </div>
