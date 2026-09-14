@@ -75,7 +75,7 @@ export default function Skills({
     return (
         <div id="skills" className="px-[clamp(32px,8vw,96px)] py-20 font-main bg-bg-second">
             <h2 className="text-[clamp(26px,3vw,48px)] font-extrabold lg:flex lg:justify-center"><span className="text-white border-b-2 lg:border-b-4 pb-1 border-text">{lang[language].skillsSection.title}</span></h2>
-            <div className={`flex flex-col gap-7 mt-15 text-white items-center lg:items-stretch lg:flex-row lg:justify-between`}>
+            <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 mt-15 text-white justify-items-center`}>
                 <div id="skillsCard1" ref={addToRefs} className={`transition-all ease-in-out duration-1200 ${isVisible.skillsCard1 ? `section-show` : `section-hide-down`}`}>
                     <CardSkill itemList={itemListLanguages} title={lang[language].skillsSection.languageBox.title} description={lang[language].skillsSection.languageBox.description} />
                 </div>

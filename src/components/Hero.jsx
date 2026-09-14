@@ -24,8 +24,7 @@ export default function Hero({
     }, [imgOpen])
 
     return (
-        <div id="home" ref={addToRefs} className={`finisher-header relative h-[650px] font-main px-[clamp(32px,8vw,96px)] pt-20 transition-blur duration-500 lg:px-[clamp(96px,10vw,160px)] lg:pt-35`}>
-            <FinisherHeader />
+        <div id="home" ref={addToRefs} className={`bg-main relative h-[650px] font-main px-[clamp(32px,8vw,96px)] pt-20 transition-blur duration-500 lg:px-[clamp(96px,10vw,160px)] lg:pt-35`}>
             <div className="relative z-10 flex flex-col gap-1 lg:flex-row lg:justify-between lg:items-center">
                 <div className="flex flex-col lg:gap-3">
                     <div>

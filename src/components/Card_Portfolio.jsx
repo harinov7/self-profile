@@ -5,7 +5,7 @@ export default function CardPortfolio({
 }) {
 
     return (
-        <div className="border-t-2 border-border rounded-b-3xl w-[clamp(250px,70vw,550px)] flex flex-col gap-2 animate-light">
+        <div className="border-t-2 border-border rounded-b-3xl w-[clamp(250px,70vw,550px)] flex flex-col gap-2 animate-light h-full">
             <img src={itemList.src} alt={itemList.alt} className="rounded-b-lg" />
             <div className="px-5 py-2">
                 <h2 className="text-[clamp(22px,2vw,32px)] font-semibold leading-tight text-white">{itemList.title}</h2>

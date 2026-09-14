@@ -99,6 +99,12 @@ function App() {
           badge: ["HTML", "CSS", "Vanilla Javascript"],
           description: "Website inventaris yang diprogram dengan vanilla JavaScript ini mengintegrasikan data via API dengan fitur CRUD, pencarian, filter, dan sort urut, serta dashboard untuk memantau data produk secara efisien.",
           btn: "Lihat"
+        },
+        box3: {
+          title: "Website Profil Diri",
+          badge: ["React", "Tailwind CSS", "Javacript"],
+          description: "Website personal profile responsif bertema hijau yang dibangun dengan React, Tailwind CSS, dan JavaScript untuk menampilkan tentang, keahlian, portofolio, perjalanan, serta kontak.",
+          btn: "Lihat"
         }
       },
       journeySection: {
@@ -211,6 +217,12 @@ function App() {
           badge: ["HTML", "CSS", "Vanilla Javascript"],
           description: "This inventory website programmed with vanilla JavaScript integrates data via an API with CRUD, search, filter, and sorting features, along with a dashboard to monitor product data efficiently.",
           btn: "Explore"
+        },
+        box3: {
+          title: "Self Profile Website",
+          badge: ["React", "Tailwind CSS", "Javacript"],
+          description: "A responsive green-themed personal profile website built with React, Tailwind CSS, and JavaScript to showcase about, skills, portfolio, journey, and contact.",
+          btn: "Explore"
         }
       },
       journeySection: {
@@ -268,6 +280,7 @@ function App() {
 
     portfolioCard1: false,
     portfolioCard2: false,
+    portfolioCard3: false,
 
     journeyCard1: false,
     journeyCard2: false,
