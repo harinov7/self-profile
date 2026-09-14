@@ -18,10 +18,18 @@ function App() {
     setHamburger(!hamburger)
   }
 
-  const [language, setLanguage] = useState('id')
+  const [language, setLanguage] = useState(() => {
+    const chosenLang = localStorage.getItem('lang')
+
+    if (chosenLang) {
+      return chosenLang
+    }
+    return 'id'
+  })
 
   const lang = {
     id: {
+      loading: "Memuat Ulang",
       changeLanguage: {
         flag: Flag_of_Indonesia,
         title: "Indonesia",
@@ -133,6 +141,7 @@ function App() {
       }
     },
     en: {
+      loading: "Loading",
       changeLanguage: {
         flag: Flag_of_United_State,
         title: "English",
@@ -245,16 +254,71 @@ function App() {
     }
   }
 
+  const navRefs = useRef([])
+
+  const [isVisible, setIsVisible] = useState({
+    home: false,
+    about: false,
+    hobby: false,
+
+    skillsCard1: false,
+    skillsCard2: false,
+    skillsCard3: false,
+
+    portfolioCard1: false,
+    portfolioCard2: false,
+
+    journeyCard1: false,
+    journeyCard2: false,
+    journeyCard3: false,
+    journeyCard4: false,
+
+    portfolio: false,
+    journey: false,
+    contact: false
+  })
+
+  useEffect(() => {
+    const observer1 = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          setIsVisible(v => v = {
+            ...v,
+            [entry.target.id]: true
+          })
+        }
+      })
+    }, { threshold: 0.3 })
+
+    navRefs.current.forEach(nav => {
+      observer1.observe(nav)
+    })
+
+    return () => {
+      navRefs.current.forEach(nav => {
+        if (nav) {
+          observer1.disconnect()
+        }
+      })
+    }
+  }, [])
+
+  const addToRefs = (element) => {
+    if (element && !navRefs.current.includes(element)) {
+      navRefs.current.push(element)
+    }
+  }
+
   return (
     <>
       <Navigasi hamburger={hamburger} handleClickHamburger={handleClickHamburger} setHamburger={setHamburger} lang={lang} language={language} setLanguage={setLanguage} />
       <main className={`transition duration-500`}>
-        <Hero lang={lang} language={language} />
-        <Tentang lang={lang} language={language} />
-        <Skills lang={lang} language={language} />
-        <Portfolio lang={lang} language={language} />
-        <Journey lang={lang} language={language} />
-        <Contact lang={lang} language={language} />
+        <Hero lang={lang} language={language} addToRefs={addToRefs} isVisible={isVisible} />
+        <Tentang lang={lang} language={language} addToRefs={addToRefs} isVisible={isVisible} />
+        <Skills lang={lang} language={language} addToRefs={addToRefs} isVisible={isVisible} />
+        <Portfolio lang={lang} language={language} addToRefs={addToRefs} isVisible={isVisible} />
+        <Journey lang={lang} language={language} addToRefs={addToRefs} isVisible={isVisible} />
+        <Contact lang={lang} language={language} addToRefs={addToRefs} isVisible={isVisible} />
       </main>
       <div className={`fixed inset-0 bg-black/30 z-30 ${hamburger ? `block opacity-100` : `hidden opacity-0`}`} />
     </>

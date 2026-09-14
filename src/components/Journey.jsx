@@ -3,7 +3,9 @@ import CardJourney from "./Card_Journey"
 
 export default function Journey({
     lang,
-    language
+    language,
+    addToRefs,
+    isVisible
 }) {
 
     const journeyItemList = [{
@@ -40,7 +42,7 @@ export default function Journey({
                 <div className="relative">
                     <div className="border-l-4 border-text border-dashed absolute left-8 top-[clamp(24px,2vw,48px)] bottom-15 w-0 md:left-1/2">
                     </div>
-                    <CardJourney itemList={journeyItemList} />
+                    <CardJourney itemList={journeyItemList} addToRefs={addToRefs} isVisible={isVisible} />
                 </div>
             </div>
 

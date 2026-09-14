@@ -2,7 +2,8 @@ import cv from "../assets/CV_FADHIL_IBNU_ADHARI.pdf"
 
 export default function Contact({
     lang,
-    language
+    language,
+    addToRefs
 }) {
 
     const contactOpt = [{
@@ -23,7 +24,7 @@ export default function Contact({
     }]
 
     return (
-        <div id="contact" className="bg-main flex flex-col px-[clamp(32px,8vw,96px)] pt-20 pb-3 font-main">
+        <div id="contact" ref={addToRefs} className="bg-main flex flex-col px-[clamp(32px,8vw,96px)] pt-20 pb-3 font-main">
             <h2 className="text-[clamp(26px,3vw,48px)] font-extrabold mb-7" ><span className="text-white border-b-2 lg:border-b-4 pb-1 border-text">Hubungi</span><span className="text-text"> Saya</span></h2 >
             <p className="mb-4 text-white text-[clamp(16px,2vw,22px)]">{lang[language].contactSection.description}</p>
             <div className="flex flex-col gap-2 text-[clamp(16px,2vw,22px)]">

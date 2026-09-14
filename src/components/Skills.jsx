@@ -14,7 +14,9 @@ import CardSkill from "./Card_Skill";
 
 export default function Skills({
     lang,
-    language
+    language,
+    addToRefs,
+    isVisible
 }) {
 
     const itemListLanguages = [
@@ -47,7 +49,7 @@ export default function Skills({
         }
     ]
 
-        const itemListTools = [
+    const itemListTools = [
         {
             src: Git_Logo,
             alt: "Git Logo"
@@ -73,10 +75,16 @@ export default function Skills({
     return (
         <div id="skills" className="px-[clamp(32px,8vw,96px)] py-20 font-main bg-bg-second">
             <h2 className="text-[clamp(26px,3vw,48px)] font-extrabold lg:flex lg:justify-center"><span className="text-white border-b-2 lg:border-b-4 pb-1 border-text">{lang[language].skillsSection.title}</span></h2>
-            <div className="flex flex-col gap-7 mt-15 text-white items-center lg:items-stretch lg:flex-row lg:justify-between">
-                <CardSkill itemList={itemListLanguages} title={lang[language].skillsSection.languageBox.title} description={lang[language].skillsSection.languageBox.description} />
-                <CardSkill itemList={itemListFramework} title={lang[language].skillsSection.frameworkBox.title} description={lang[language].skillsSection.frameworkBox.description} />
-                <CardSkill itemList={itemListTools} title={lang[language].skillsSection.toolsBox.title} description={lang[language].skillsSection.toolsBox.description} />
+            <div className={`flex flex-col gap-7 mt-15 text-white items-center lg:items-stretch lg:flex-row lg:justify-between`}>
+                <div id="skillsCard1" ref={addToRefs} className={`transition-all ease-in-out duration-1200 ${isVisible.skillsCard1 ? `section-show` : `section-hide-down`}`}>
+                    <CardSkill itemList={itemListLanguages} title={lang[language].skillsSection.languageBox.title} description={lang[language].skillsSection.languageBox.description} />
+                </div>
+                <div id="skillsCard2" ref={addToRefs} className={`transition-all ease-in-out duration-1200 ${isVisible.skillsCard2 ? `section-show` : `section-hide-down`}`}>
+                    <CardSkill itemList={itemListFramework} title={lang[language].skillsSection.frameworkBox.title} description={lang[language].skillsSection.frameworkBox.description} />
+                </div>
+                <div id="skillsCard3" ref={addToRefs} className={`transition-all ease-in-out duration-1200 ${isVisible.skillsCard3 ? `section-show` : `section-hide-down`}`}>
+                    <CardSkill itemList={itemListTools} title={lang[language].skillsSection.toolsBox.title} description={lang[language].skillsSection.toolsBox.description} />
+                </div>
             </div>
         </div>
     )

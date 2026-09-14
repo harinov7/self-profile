@@ -5,7 +5,9 @@ import CardPortfolio from "./Card_Portfolio";
 
 export default function Portfolio({
     lang,
-    language
+    language,
+    addToRefs,
+    isVisible
 }) {
 
     const itemListDuniaEs = {
@@ -29,11 +31,15 @@ export default function Portfolio({
     }
 
     return (
-        <div id="portfolio" className="bg-main flex flex-col gap-15 px-[clamp(32px,8vw,96px)] py-20 font-main">
+        <div id="portfolio" ref={addToRefs} className="bg-main flex flex-col gap-15 px-[clamp(32px,8vw,96px)] py-20 font-main">
             <h2 className="text-[clamp(26px,3vw,48px)] font-extrabold lg:flex lg:justify-center"><span className="text-white border-b-2 lg:border-b-4 pb-1 border-text">Portofolio</span></h2>
             <div className="flex flex-col gap-7 items-center lg:items-stretch lg:flex-row lg:justify-center">
-                <CardPortfolio itemList={itemListDuniaEs} />
-                <CardPortfolio itemList={itemListInventory} />
+                <div id="portfolioCard1" ref={addToRefs} className={`transition-all ease-in-out duration-1200 ${isVisible.portfolioCard1 ? `section-show` : `section-hide-down`}`}>
+                    <CardPortfolio itemList={itemListDuniaEs} />
+                </div>
+                <div id="portfolioCard2" ref={addToRefs} className={`transition-all ease-in-out duration-1200 ${isVisible.portfolioCard2 ? `section-show` : `section-hide-down`}`}>
+                    <CardPortfolio itemList={itemListInventory} />
+                </div>
             </div>
         </div>
     )

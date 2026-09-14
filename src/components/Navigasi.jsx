@@ -25,6 +25,7 @@ export default function Navigasi({
     function handleChangeLanguage(e) {
         setLanguage(e.currentTarget.id)
         setToggleLanguage(false)
+        localStorage.setItem('lang', e.currentTarget.id)
     }
 
     return (
@@ -40,7 +41,7 @@ export default function Navigasi({
                     ))}
                 </ul>
                 <div>
-                    <button className="text-white text-xs md:text-sm lg:text-base font-bold flex gap-1 cursor-pointer" onClick={() => setToggleLanguage(!toggleLanguage)}>
+                    <button className="text-white text-xs md:text-sm lg:text-base font-bold flex items-center gap-1 cursor-pointer" onClick={() => setToggleLanguage(!toggleLanguage)}>
                         <img src={lang[language].changeLanguage.flag} alt={lang[language].changeLanguage.alt} width={250} height={150} className='max-w-5 max-h-3' />
                         <small>{lang[language].changeLanguage.title}</small>
                         <i className="fa-solid fa-caret-down"></i>

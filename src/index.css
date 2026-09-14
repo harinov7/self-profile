@@ -54,3 +54,41 @@ body::-webkit-scrollbar,
 #root::-webkit-scrollbar {
   display: none; /* Chrome, Safari, dan Edge Baru */
 }
+
+.section-hide-down {
+  opacity: 0%;
+  transform: translate(0px, clamp(50px, 16vw, 100px));
+}
+
+.section-hide-down-more {
+  opacity: 0%;
+  transform: translate(0px, clamp(70px, 18vw, 120px));
+}
+
+.section-hide-up {
+  opacity: 0%;
+  transform: translate(0px, clamp(-50px, -16vw, -100px));
+}
+
+.section-hide-left {
+  opacity: 0%;
+  transform: translate(clamp(-50px, -16vw, -100px), 0px);
+}
+
+.section-hide-right {
+  opacity: 0%;
+  transform: translate(0px, clamp(50px, 16vw, 100px));
+}
+
+.section-hide-opacity{
+  opacity: 0%;
+}
+
+.section-hide-rotate-right {
+  transform: rotateX(0deg) rotateY(90deg) rotateZ(4deg);
+}
+
+.section-show {
+  opacity: 100%;
+  transform: translate(0px, 0px) rotate(0deg) scale(100%);
+}

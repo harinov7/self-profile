@@ -1,0 +1,3 @@
+13 September bikin intersection observer untuk:
+- aside navigasi menu yg aktif = nyala ijo
+- animasi menu menu yang pertama kali terlihat di viewport
