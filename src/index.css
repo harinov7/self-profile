@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --color-main: #1b1f1a;
+  --color-main: #192118;
   --color-bg-second: #141414;
   --color-card: #C69874;
   --color-card-shadow: rgba(122, 209, 117, 0.2);
@@ -78,7 +78,7 @@ body::-webkit-scrollbar,
 
 .section-hide-right {
   opacity: 0%;
-  transform: translate(0px, clamp(50px, 16vw, 100px));
+  transform: translate(clamp(50px, 16vw, 100px), 0px);
 }
 
 .section-hide-opacity{

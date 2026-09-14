@@ -8,6 +8,9 @@ import './index.css'
 import Contact from './components/Contact'
 import Flag_of_Indonesia from './assets/Flag_of_Indonesia.webp'
 import Flag_of_United_State from './assets/Flag_of_United_State.webp'
+
+import CV_FADHIL_IBNU_ADHARI_ID from "./assets/CV_FADHIL_IBNU_ADHARI_ID.pdf"
+import CV_FADHIL_IBNU_ADHARI_EN from "./assets/CV_FADHIL_IBNU_ADHARI_EN.pdf"
 import { useEffect, useRef, useState } from 'react'
 
 function App() {
@@ -61,7 +64,8 @@ function App() {
         title: "Kontak"
       }],
       heroSection: {
-        loadCV: "Unduh Cv",
+        loadCV: "Lihat Cv",
+        linkCV: CV_FADHIL_IBNU_ADHARI_ID
       },
       aboutSection: {
         title: "Tentang",
@@ -137,7 +141,8 @@ function App() {
         contactOpt: {
           location: "Ciampea, Kabupaten Bogor, Jawa Barat"
         },
-        loadCV: "Unduh CV",
+        loadCV: "Lihat CV",
+        linkCV: CV_FADHIL_IBNU_ADHARI_ID,
         footer: {
           about: "Tentang",
           skills: "Keahlian",
@@ -179,7 +184,8 @@ function App() {
         title: "Contact"
       }],
       heroSection: {
-        loadCV: "Download CV",
+        loadCV: "View CV",
+        linkCV: CV_FADHIL_IBNU_ADHARI_EN
       },
       aboutSection: {
         title: "About",
@@ -220,7 +226,7 @@ function App() {
         },
         box3: {
           title: "Self Profile Website",
-          badge: ["React", "Tailwind CSS", "Javacript"],
+          badge: ["React", "Tailwind CSS", "Typescript"],
           description: "A responsive green-themed personal profile website built with React, Tailwind CSS, and JavaScript to showcase about, skills, portfolio, journey, and contact.",
           btn: "Explore"
         }
@@ -255,7 +261,8 @@ function App() {
         contactOpt: {
           location: "Ciampea, Bogor Regency, West Java"
         },
-        loadCV: "Download CV",
+        loadCV: "View CV",
+        linkCV: CV_FADHIL_IBNU_ADHARI_EN,
         footer: {
           about: "About",
           skills: "Skills",
@@ -302,7 +309,7 @@ function App() {
           })
         }
       })
-    }, { threshold: 0.3 })
+    }, { threshold: 0.2 })
 
     navRefs.current.forEach(nav => {
       observer1.observe(nav)

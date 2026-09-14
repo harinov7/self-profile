@@ -1,3 +1,9 @@
 13 September bikin intersection observer untuk:
 - aside navigasi menu yg aktif = nyala ijo
 - animasi menu menu yang pertama kali terlihat di viewport
+
+REFACTOR NANTI:
+- Animasi badge scale x melar
+- bikin file useLanguage.js untuk custom hook
+- bikin file data.js isinya data kayak data data ganti bahasa (in,en,ru) dan tema
+- Bikin light mode dan dark/light switcher juga custom hook useTheme.js

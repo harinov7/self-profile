@@ -1,4 +1,4 @@
-import cv from "../assets/CV_FADHIL_IBNU_ADHARI.pdf"
+
 
 export default function Contact({
     lang,
@@ -43,7 +43,7 @@ export default function Contact({
                     <i className="fa-brands fa-github"></i>
                 </a>
             </div>
-            <a href={cv} download="CV_Fadhil_Ibnu_Adhari" className="border-t-2 border-border rounded-b-lg w-fit px-3 py-2 mt-5 text-lg lg:text-2xl transition duration-300 hover:bg-card hover:text-white hover:animate-light-hover font-bold text-text animate-light">{lang[language].contactSection.loadCV}</a>
+            <a href={lang[language].contactSection.linkCV} target="_blank" rel="noopener noreferrer" className="border-t-2 border-border rounded-b-lg w-fit px-3 py-2 mt-5 text-lg lg:text-2xl transition duration-300 hover:bg-card hover:text-white hover:animate-light-hover font-bold text-text animate-light">{lang[language].contactSection.loadCV}</a>
             <div className="mt-5 text-sm flex flex-col gap-3">
                 <hr className="text-text"></hr>
                     <a href="#home" className="w-fit text-white text-[clamp(10px,1vw,16px)]">
