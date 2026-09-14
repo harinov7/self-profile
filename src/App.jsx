@@ -259,6 +259,7 @@ function App() {
   const [isVisible, setIsVisible] = useState({
     home: false,
     about: false,
+    profilePicture01: false,
     hobby: false,
 
     skillsCard1: false,
