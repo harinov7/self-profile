@@ -34,7 +34,7 @@ export default function Tentang({
             </div>
             <div className="flex justify-center flex-row-reverse mt-[clamp(12px,3vw,24px)]">
                 <img id="profilePicture01" ref={addToRefs} src={Profile_Picture_02} onClick={() => setImgOpen(true)} width={300} alt="Foto Profil" className={`w-[clamp(250px,90vw,350px)] h-[clamp(250px,90vw,350px)] rounded-xl translate-y-3 object-cover lg:w-[clamp(250px,35vw,450px)] lg:h-[clamp(250px,35vw,450px)] transition-all ease-in-out duration-1200 ${isVisible.profilePicture01 ? `section-show` : `section-hide-rotate-right`}`} />
-                <div className={`absolute flex flex-col items-center bg-card text-white rounded-md px-2 py-1 shadow-md text-xs md:text-sm lg:text-lg transition-all ease-in-out duration-1200 ${isVisible.about ? `section-show` : `section-hide-up`}`}>
+                <div className={`absolute flex flex-col items-center bg-card text-white rounded-md px-2 py-1 shadow-md text-xs md:text-sm lg:text-lg transition-all ease-in-out duration-1200 ${isVisible.profilePicture01 ? `section-show` : `section-hide-up`}`}>
                     <i className="fa-regular fa-calendar-days"></i>
                     <h3 className="font-semibold">{lang[language].aboutSection.date}</h3>
                 </div>
