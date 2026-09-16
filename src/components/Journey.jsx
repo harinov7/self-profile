@@ -36,7 +36,7 @@ export default function Journey({
     ]
 
     return (
-        <div id="journey" className="bg-bg-second flex flex-col gap-10 px-[clamp(32px,8vw,96px)] py-20 font-main">
+        <div id="journey" className="bg-bg-second flex flex-col gap-10 px-[clamp(32px,8vw,96px)] py-20 font-main overflow-x-clip">
             <h2 className="text-[clamp(26px,3vw,48px)] font-extrabold lg:flex lg:justify-center"><span className="text-white border-b-2 border-b-4 pb-1 border-text">{lang[language].journeySection.title}</span></h2>
             <div>
                 <div className="relative">

@@ -74,7 +74,10 @@ export default function Navigasi({
             </div>
 
 
-            <aside className={`fixed h-dvh overflow-y-auto bg-main z-40 w-[clamp(230px,70vw,300px)] px-5 pt-20 transition duration-500 ${hamburger ? `translate-x-0` : `-translate-x-[clamp(240px,70vw,480px)]`} lg:hidden`}>
+            <aside className={`fixed h-dvh overflow-y-auto bg-main z-40 w-[clamp(230px,70vw,300px)] px-5 pt-20 transition duration-500 ${hamburger
+    ? `translate-x-0`
+    : `-translate-x-full`
+} lg:hidden`}>
                 <div className="flex flex-col items-center gap-2">
                     <div className="flex items-center justify-center gap-4">
                         <img src={Profile_Picture_01} alt="Foto Profil 1" className="w-10 h-10 object-cover rounded-full shadow-[0_0_15px_rgba(122,209,117,0.2)]" />
