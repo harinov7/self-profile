@@ -109,6 +109,12 @@ function App() {
           badge: ["React", "Tailwind CSS", "Javacript"],
           description: "Website personal profile responsif bertema hijau yang dibangun dengan React, Tailwind CSS, dan JavaScript untuk menampilkan tentang, keahlian, portofolio, perjalanan, serta kontak.",
           btn: "Lihat"
+        },
+        box4: {
+          title: "Website Freelance",
+          badge: ["React", "Tailwind CSS", "Javacript"],
+          description: "Website Waroeng Nasi Djembat merupakan website freelance pertama saya. Website ini merupakan landing page dari suatu resto di Kabupaten Bogor yang dibangun dengan React, Tailwind CSS, dan Javascript.",
+          btn: "Lihat"
         }
       },
       journeySection: {
@@ -228,6 +234,12 @@ function App() {
           title: "Self Profile Website",
           badge: ["React", "Tailwind CSS", "Typescript"],
           description: "A responsive green-themed personal profile website built with React, Tailwind CSS, and JavaScript to showcase about, skills, portfolio, journey, and contact.",
+          btn: "Explore"
+        }, 
+        box4: {
+          title: "Freelace Website",
+          badge: ["React", "Tailwind CSS", "Javacript"],
+          description: "Waroeng Nasi Djembat website is my first freelance website. This website is a landing page of a restaurant in Bogor Regency built with React, Tailwind CSS, and Javascript.",
           btn: "Explore"
         }
       },
