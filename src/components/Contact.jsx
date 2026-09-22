@@ -12,7 +12,7 @@ export default function Contact({
         icon: "fa-regular fa-envelope",
         title: "ifadil728@gmail.com"
     }, {
-        l: "https://wa.me/6289532058484?text=Halo%20Kak%20Fadil%2C%20kami%20dari%20%5Bnama%20perusahaan%5D%20ingin%20menawarkan%20Kak%20Fadil%20untuk%20bergabung%20dalam%20project%20kami.",
+        l: "https://wa.me/62895320825569?text=Halo%20Kak%20Fadil%2C%20kami%20dari%20%5Bnama%20perusahaan%5D%20ingin%20menawarkan%20Kak%20Fadil%20untuk%20bergabung%20dalam%20project%20kami.",
         col: "text-[#25D366]",
         icon: "fa-brands fa-whatsapp",
         title: "Hubungi Melalui WhatsApp"
