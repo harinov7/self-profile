@@ -2,6 +2,7 @@ import Web_Porto_Dunia_Es from "../assets/Web_Porto_Dunia_Es.avif"
 import Web_Porto_Inventory from "../assets/Web_Porto_Inventory.jpeg"
 import Web_Porto_Self_Profile from '../assets/Web_Porto_Self_Profile.avif'
 import Web_Porto_Waroeng_Djembat from '../assets/Web_Porto_Waroeng_Djembat.avif'
+import Web_Porto_Flowboard from '../assets/Web_Porto_Flowboard.jpg'
 import CardPortfolio from "./Card_Portfolio";
 
 
@@ -20,7 +21,8 @@ export default function Portfolio({
         badge: lang[language].portfolioSection.box1.badge,
         description: lang[language].portfolioSection.box1.description,
         href: "https://dunia-es-website.vercel.app/",
-        btn: lang[language].portfolioSection.box1.btn
+        btn: lang[language].portfolioSection.box1.btn,
+        ready: true
     }, {
         id: "portfolioCard2",
         src: Web_Porto_Inventory,
@@ -29,7 +31,8 @@ export default function Portfolio({
         badge: lang[language].portfolioSection.box2.badge,
         description: lang[language].portfolioSection.box2.description,
         href: "https://inventory-management-system-wheat-nu.vercel.app/",
-        btn: lang[language].portfolioSection.box2.btn
+        btn: lang[language].portfolioSection.box2.btn,
+        ready: true
     }, {
         id: "portfolioCard3",
         src: Web_Porto_Self_Profile,
@@ -38,7 +41,8 @@ export default function Portfolio({
         badge: lang[language].portfolioSection.box3.badge,
         description: lang[language].portfolioSection.box3.description,
         href: "https://fadil-dev.vercel.app/",
-        btn: lang[language].portfolioSection.box3.btn
+        btn: lang[language].portfolioSection.box3.btn,
+        ready: true
     }, {
         id: "portfolioCard4",
         src: Web_Porto_Waroeng_Djembat,
@@ -47,17 +51,29 @@ export default function Portfolio({
         badge: lang[language].portfolioSection.box4.badge,
         description: lang[language].portfolioSection.box4.description,
         href: "https://waroeng-djembat.vercel.app/",
-        btn: lang[language].portfolioSection.box4.btn
-    }]
+        btn: lang[language].portfolioSection.box4.btn,
+        ready: true
+    }, {
+        id: "portfolioCard5",
+        src: Web_Porto_Flowboard,
+        alt: "Web_Porto_Flowboard",
+        title: lang[language].portfolioSection.box5.title,
+        badge: lang[language].portfolioSection.box5.badge,
+        description: lang[language].portfolioSection.box5.description,
+        href: "/",
+        btn: lang[language].portfolioSection.box5.btn,
+        ready: false
+    }
+    ]
 
     return (
         <div id="portfolio" ref={addToRefs} className="bg-main flex flex-col gap-15 px-[clamp(32px,8vw,96px)] py-20 font-main">
             <h2 className="text-[clamp(26px,3vw,48px)] font-extrabold lg:flex lg:justify-center"><span className="text-white border-b-2 lg:border-b-4 pb-1 border-text">Portofolio</span></h2>
             <div className="flex flex-col gap-7 items-center lg:items-stretch lg:flex-row lg:justify-center flex-wrap">
-                {portfolioList.map((porto, i) => (
+                {portfolioList.map((porto) => (
                     <div id={porto.id} ref={addToRefs} className={`transition-all ease-in-out duration-1200 ${isVisible[porto.id] ? `section-show` : `section-hide-down`}`}>
-                    <CardPortfolio itemList={porto} />
-                </div>
+                        <CardPortfolio itemList={porto} />
+                    </div>
                 ))}
             </div>
         </div>

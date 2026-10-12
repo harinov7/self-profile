@@ -115,6 +115,12 @@ function App() {
           badge: ["React", "Tailwind CSS", "Javacript"],
           description: "Website Waroeng Nasi Djembat merupakan website freelance pertama saya. Website ini merupakan landing page dari suatu resto di Kabupaten Bogor yang dibangun dengan React, Tailwind CSS, dan Javascript.",
           btn: "Lihat"
+        },
+        box5: {
+          title: "Flowboard: Web To-do List Interaktif",
+          badge: ["React", "Tailwind CSS", "Typescript", "Supabase"],
+          description: "Sebuah aplikasi to-do list interaktif dan modern yang dibangun menggunakan React, TypeScript, dan Tailwind CSS. Dilengkapi dengan sistem autentikasi yang aman serta fitur drag-and-drop kartu untuk manajemen tugas yang mulus dan ramah pengguna (user-friendly).",
+          btn: "(Dalam Progres)"
         }
       },
       journeySection: {
@@ -138,7 +144,7 @@ function App() {
           title: "Institut Teknologi dan Bisnis Vinus",
           badge: ["S1 Sistem Informasi"],
           description: "Saat ini menempuh pendidikan Sistem Informasi untuk memperdalam pemahaman mengenai teknologi, sistem, dan pengembangan aplikasi."
-        }
+        },
       },
       contactSection: {
         title1: "Hubungi",
@@ -241,6 +247,12 @@ function App() {
           badge: ["React", "Tailwind CSS", "Javacript"],
           description: "Waroeng Nasi Djembat website is my first freelance website. This website is a landing page of a restaurant in Bogor Regency built with React, Tailwind CSS, and Javascript.",
           btn: "Explore"
+        }, 
+        box5: {
+          title: "Flowboard: An Interactive Web To-do List",
+          badge: ["React", "Tailwind CSS", "Typescript", "Supabase"],
+          description: "An interactive and modern to-do list application built using React, TypeScript, and Tailwind CSS. Equipped with a secure authentication system as well as a drag-and-drop card feature for smooth and user-friendly task management.",
+          btn: "(In Progress)"
         }
       },
       journeySection: {

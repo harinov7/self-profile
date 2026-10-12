@@ -19,12 +19,16 @@ export default function CardPortfolio({
                 <p className="text-white">{itemList.description}</p>
 
                 <div className="w-fit">
-                    <a href={itemList.href} target="_blank" rel="noopener noreferrer">
-                        <p className="px-4 py-2 my-5 rounded-lg bg-card text-white font-bold transition duration-300 hover:scale-107">
+                        {itemList.ready ? 
+                        <a href={itemList.href} target="_blank" rel="noopener noreferrer">
+                            <p className="px-4 py-2 my-5 rounded-lg bg-card text-white font-bold transition duration-300 hover:scale-107">
                             {itemList.btn}
                         </p>
-                    </a>
-
+                        </a> 
+                        : 
+                        <p className="px-4 py-2 my-5 rounded-lg bg-card-inactive text-card-text-inactive font-bold cursor-not-allowed">
+                            {itemList.btn}
+                        </p>}
                 </div>
             </div>
         </div>
