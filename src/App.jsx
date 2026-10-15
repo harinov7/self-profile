@@ -9,8 +9,8 @@ import Contact from './components/Contact'
 import Flag_of_Indonesia from './assets/Flag_of_Indonesia.webp'
 import Flag_of_United_State from './assets/Flag_of_United_State.webp'
 
-import CV_FADHIL_IBNU_ADHARI_ID from "./assets/CV_FADHIL_IBNU_ADHARI_ID.pdf"
-import CV_FADHIL_IBNU_ADHARI_EN from "./assets/CV_FADHIL_IBNU_ADHARI_EN.pdf"
+import CV_FADHIL_IBNU_ADHARI_ID from "./assets/CV_FADHIL_IBNU_ADHARI_ID_Oct.pdf"
+import CV_FADHIL_IBNU_ADHARI_EN from "./assets/CV_FADHIL_IBNU_ADHARI_EN_Oct.pdf"
 import { useEffect, useRef, useState } from 'react'
 
 function App() {
